@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="localsto.css">
+</head>
+<body>
+    <div class="com">
+    <div class="box">
+        <h1> login</h1>
+        <h2> Welcome <span id="user">gemini</span></h2>
+        </div>
+        <div class="box1">
+        <input type="text" id="inp" placeholder="username">
+        
+       
+        <input type="email" id="inp2" placeholder="email">
+        
+        <button onclick="fn()">login</button>
+        
+        <button onclick="fn2()">logout</button>
+        
+        </div>
+        
+    </div>
+    
+</body>
+<script>
+    function fn(){
+     let inp= document.getElementById("inp").value;
+     
+         localStorage.setItem("username",inp)
+         let inp2=document.getElementById("inp2").value;
+         
+         localStorage.setItem("email",inp2)
+    }
+    window.addEventListener("load",() => {
+        const value=localStorage.getItem("username");
+        const user=document.getElementById("user");
+       
+    })
+
+    function fn2(){
+        localStorage.removeItem("username");
+        localStorage.removeItem("email");
+        
+        location.reload()
+    }
+</script>
+</html>
