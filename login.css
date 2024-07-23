@@ -1,0 +1,20 @@
+.box1{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.box{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.com{
+    border:2px black solid;
+    margin-top:200px;
+    padding: 10px 10px;
+    background-color: rgb(36, 54, 54);
+}
